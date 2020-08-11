@@ -1,0 +1,15 @@
+public class Welcome {
+   public static void main(String args[]){
+       int a = -10;
+       if (a>0)
+       {
+           System.out.println("Number is Positive");
+       }
+       if (a<0)
+       {
+           System.out.println("Number is Negative");
+       }
+       if (a==0) {
+           System.out.println("Number is Zero");}
+   }
+}
