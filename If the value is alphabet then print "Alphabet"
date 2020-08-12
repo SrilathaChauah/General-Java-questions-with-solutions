@@ -1,0 +1,29 @@
+\\ Initialize a character variable in a program and if the value is alphabet then print "Alphabet" if it’s a number then print "Digit" and for other characters print "Special Character"
+
+package com.javaBasics;
+
+import java.util.Scanner;
+
+public class dataType {
+   public static void main(String args[]) {
+
+       // ask the user to enter something
+
+       Scanner myObj = new Scanner(System.in);
+       System.out.println("Enter something: ");
+
+       // check if the entered value is a digit or an alphabet or a special character
+
+
+       if (myObj.hasNextInt()) {
+           System.out.println("it's a Digit");
+       } else if (myObj.hasNext()) {
+           String alphabet = myObj.nextLine();
+           if (alphabet.length() > 1) {
+               System.out.println("it's an Alphabet");
+           } else {
+               System.out.println("It's a special character");
+           }
+       }
+   }
+}
