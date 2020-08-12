@@ -1,0 +1,35 @@
+\\ Write a program to check if the program has received command-line arguments or not. If the program has not received the values then print "No Values", else print all the values in a single line separated by,(comma). Eg1) java Example O/P: No values Eg2) java Example Mumbai Bangalore O/P: Mumbai, Bangalore [Note: You can use the length property of an array to check its length
+
+package com.javaBasics;
+
+import java.util.Scanner;
+public class Code
+{
+   public static void main(String[] args) {
+       int countOfStringsUserEnters;
+       //String temp;
+       Scanner scan = new Scanner(System.in);
+
+       //User will be asked to enter the count of strings
+       System.out.println("Enter number of strings you would like to enter:");
+       countOfStringsUserEnters = scan.nextInt();
+
+       if (countOfStringsUserEnters == 0) {
+           System.out.println("No values");
+       } else {
+           //take countOfStringsUserEnters from user
+           String[] inputStrings = new String[countOfStringsUserEnters];
+           for (int i = 1; i <= countOfStringsUserEnters; i++) {
+               System.out.println("Enter" + i + "String");
+               inputStrings[i - 1] = scan.next();
+           }
+           //print the strings seperated by comma
+           for (int i = 0; i < inputStrings.length; i++) {
+               System.out.print(inputStrings[i]);
+               if (i != countOfStringsUserEnters - 1) {
+                   System.out.print(",");
+               }
+           }
+       }
+   }
+}
