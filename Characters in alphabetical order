@@ -1,0 +1,18 @@
+\\ Initialize two character variables in a program and display the characters in alphabetical order. Eg1) if the first character is s and second is e O/P: e,s Eg2) if the first character is a and second is e O/P: a,e
+
+package com.javaBasics;
+import java.util.Scanner;
+public class Initialize {
+   public static void main(String args[]){
+       char a ='n';
+       char b = 'a';
+
+       //ASCII A-Z - 65 - 90 a - z - 97-122
+       if(a<b){
+           System.out.println(a+" "+b);
+       }
+       else{
+           System.out.println(b+" "+a);
+       }
+   }
+}
